@@ -57,7 +57,7 @@ body{
 }
 */
 
-#resume{
+.resume{
     background-color: transparent;
     border: none;
     outline: none;
@@ -67,7 +67,7 @@ body{
     transition: 0.5s;
     font-size: 20px;
 }
-#resume:hover{
+.resume:hover{
     background-color: rgb(165, 235, 235);
     cursor: pointer;
 }

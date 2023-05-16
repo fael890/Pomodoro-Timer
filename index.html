@@ -14,11 +14,14 @@
 <body>
     <div class="container">
         <div class="timer base">
-            00:00
+            <label id="timerNumbers">25:00</label>
         </div>
         <div class="timer-button base">
-            <button id="resume" onclick="start()">
-                play / stop
+            <button class="resume" onclick="playTimer()">
+                play
+            </button>
+            <button class="resume" onclick="stopTimer()">
+                stop
             </button>
         </div>
         <div class="cycles base">       
@@ -28,6 +31,6 @@
             <div><span class="material-symbols-outlined icon">star</span></div>  
         </div>
     </div>
-
+    <script src="app.js"></script>
 </body>
 </html>
