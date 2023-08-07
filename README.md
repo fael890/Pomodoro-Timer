@@ -1,3 +1,1 @@
 # pomodoro-timer
-
-teste
