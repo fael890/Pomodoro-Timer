@@ -33,6 +33,7 @@ function playTimer(){
                     workMinutes = workTime - 1;
                     breakMoment = false;
                     breakCount++;
+                    addFilledStar(breakCount);
                 }  
             }
 
@@ -40,5 +41,10 @@ function playTimer(){
         }
     }
 
-    setInterval(timerFunction, 200);
+    setInterval(timerFunction, 50);
+}
+
+function addFilledStar(breakCount){
+    const filledStarPath = "static/filled_star.png";
+    document.getElementById("cycle" + breakCount).src = filledStarPath;
 }

@@ -85,3 +85,7 @@ body{
     color: rgb(240, 240, 169);
     -webkit-text-stroke: 1px rgb(240, 240, 169);
 }
+
+.star-symbol{
+    height: 60px;
+}
