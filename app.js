@@ -1,5 +1,5 @@
-let workTime = 25;
-let breakTime = 5;
+let workTime = 1;
+let breakTime = 1;
 let seconds = "00";
 let breakMoment = false;
 
@@ -29,11 +29,13 @@ function playTimer(){
                 if(breakMoment === false){
                     workMinutes = breakMinutes;
                     breakMoment = true;
+                    playAudio(breakMoment);
                 } else{
                     workMinutes = workTime - 1;
                     breakMoment = false;
                     breakCount++;
-                    addFilledStar(breakCount); 
+                    addFilledStar(breakCount);
+                    playAudio(breakMoment);
                 }
             }
 
@@ -41,14 +43,24 @@ function playTimer(){
         }
     }
 
-    let interval = setInterval(timerFunction, 1000);
+    let interval = setInterval(timerFunction, 500);
 }
 
 function addFilledStar(breakCount){
-    const filledStarPath = "static/filled_star.png";
+    const filledStarPath = "static/img/filled_star.png";
     document.getElementById("cycle" + breakCount).src = filledStarPath;
 }
 
 function restartPage() {
     window.location.reload();
 }
+
+function playAudio(breakMoment) {
+    var audio = new Audio('static/audio/bell.mp3');
+
+    if (breakMoment) {
+        audio.play();
+    }else{
+        audio.play();
+    }
+}   
