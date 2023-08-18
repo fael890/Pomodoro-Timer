@@ -1,5 +1,5 @@
-let workTime = 1;
-let breakTime = 1;
+let workTime = 25;
+let breakTime = 5;
 let seconds = "00";
 let breakMoment = false;
 
@@ -43,7 +43,7 @@ function playTimer(){
         }
     }
 
-    let interval = setInterval(timerFunction, 500);
+    let interval = setInterval(timerFunction, 1000);
 }
 
 function addFilledStar(breakCount){
